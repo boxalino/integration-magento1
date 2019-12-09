@@ -44,4 +44,16 @@
             </boxalino_integration>
         </blocks>
     </global>
+
+    <default>
+        <web>
+            <routers>
+                <boxalino_integration_narrative>
+                    <area>frontend</area>
+                    <class>Boxalino_Integration_Controller_LandingRouter</class>
+                </boxalino_integration_narrative>
+            </routers>
+        </web>
+
+    </default>
 </config>
