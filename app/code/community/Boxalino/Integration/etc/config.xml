@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<config>
+    <modules>
+        <Boxalino_Integration>
+            <version>0.1.0</version>
+        </Boxalino_Integration>
+    </modules>
+
+    <frontend>
+        <routers>
+            <boxalinointegration>
+                <use>standard</use>
+                <args>
+                    <module>Boxalino_Integration</module>
+                    <frontName>boxalinointegration</frontName>
+                </args>
+            </boxalinointegration>
+        </routers>
+        <layout>
+            <updates>
+                <boxalino_integration>
+                    <file>boxalino_integration.xml</file>
+                </boxalino_integration>
+            </updates>
+        </layout>
+    </frontend>
+    <global>
+        <models>
+            <boxalino_integration>
+                <class>Boxalino_Integration_Model</class>
+            </boxalino_integration>
+        </models>
+
+        <helpers>
+            <boxalino_integration>
+                <class>Boxalino_Integration_Helper</class>
+            </boxalino_integration>
+        </helpers>
+
+        <blocks>
+            <boxalino_integration>
+                <class>Boxalino_Integration_Block</class>
+            </boxalino_integration>
+        </blocks>
+    </global>
+</config>

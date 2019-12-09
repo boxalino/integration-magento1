@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<config>
+    <modules>
+        <Boxalino_Integration>
+            <active>true</active>
+            <codePool>community</codePool>
+            <depends>
+                <Boxalino_Intelligence/>
+            </depends>
+        </Boxalino_Integration>
+    </modules>
+</config>
