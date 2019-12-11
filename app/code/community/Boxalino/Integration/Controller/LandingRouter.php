@@ -7,6 +7,8 @@
  * Manages the default match logic
  *
  * ex: router that matches a request path like <store-url>/self::BOXALINO_INTEGRATION_SEGMENT_LANDING/<campaign-parameter-value>
+ *
+ * @author Boxalino AG <support@boxalino.com>
  */
 class Boxalino_Integration_Controller_LandingRouter extends Boxalino_Integration_Controller_AbstractRouter
 {

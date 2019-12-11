@@ -17,6 +17,7 @@
                 </args>
             </boxalinointegration>
         </routers>
+
         <layout>
             <updates>
                 <boxalino_integration>
@@ -24,6 +25,18 @@
                 </boxalino_integration>
             </updates>
         </layout>
+
+        <events>
+            <!-- @scenario2: Apply Custom Page Layout handle updates on category view - Observer -->
+            <controller_action_layout_load_before>
+                <observers>
+                    <boxalino_integration_apply_handles_on_category>
+                        <class>boxalino_integration/observer</class>
+                        <method>applyLayoutHandlesOnCategoryView</method>
+                    </boxalino_integration_apply_handles_on_category>
+                </observers>
+            </controller_action_layout_load_before>
+        </events>
     </frontend>
     <global>
         <models>
@@ -43,6 +56,25 @@
                 <class>Boxalino_Integration_Block</class>
             </boxalino_integration>
         </blocks>
+
+        <page>
+            <layouts>
+                <!-- @scenario1: Adding Custom Page Layout handle - No Observer -->
+                <boxalino_dynamic_recommendation_no_observer module="page" translate="label">
+                    <label>Boxalino Dynamic Recommendations No Observer</label>
+                    <template>boxalino/integration/page/1column.phtml</template>
+                    <layout_handle>boxalino_dynamic_recommendation_one_column</layout_handle>
+                </boxalino_dynamic_recommendation_no_observer>
+
+                <!-- @scenario2: Adding Custom Page Layout handle - No Observer -->
+                <boxalino_dynamic_recommendation_observer module="page" translate="label">
+                    <label>Boxalino Dynamic Recommendations Observer</label>
+                    <template>page/1column.phtml</template>
+                    <layout_handle>boxalino_dynamic_recommendation_one_column</layout_handle>
+                </boxalino_dynamic_recommendation_observer>
+
+            </layouts>
+        </page>
     </global>
 
     <default>

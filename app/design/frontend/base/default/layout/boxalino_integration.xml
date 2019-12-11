@@ -1,5 +1,33 @@
 <?xml version="1.0"?>
 
 <layout version="0.1.0">
+    <!-- @scenario1: Adding Custom Page Layout handle - No Observer-->
+    <boxalino_dynamic_recommendation_no_observer translate="label">
+        <update handle="page_one_column" />
+        <label>Boxalino Dynamic Recommendations No Observer</label>
+        <reference name="content">
+            <block type="boxalino_intelligence/recommendation" name="no_observer_recommendations" after="-"  template="boxalino/recommendation.phtml">
+                <action method="setWidget"><value>brand</value></action>
+                <action method="setTitle"><value>Brand</value></action>
+                <action method="setScenario"><value>category</value></action>
+                <action method="setMax"><value>12</value></action>
+                <action method="setMin"><value>12</value></action>
+            </block>
+        </reference>
+    </boxalino_dynamic_recommendation_no_observer>
 
+    <!-- @scenario2: Adding Custom Page Layout handle - Observer-->
+    <boxalino_dynamic_recommendation_observer translate="label">
+        <update handle="page_one_column" />
+        <label>Boxalino Dynamic Recommendations Observer</label>
+        <reference name="content">
+            <block type="boxalino_intelligence/recommendation" name="category_recommendations" after="-"  template="boxalino/recommendation.phtml">
+                <action method="setWidget"><value>brand</value></action>
+                <action method="setTitle"><value>Brand</value></action>
+                <action method="setScenario"><value>category</value></action>
+                <action method="setMax"><value>6</value></action>
+                <action method="setMin"><value>6</value></action>
+            </block>
+        </reference>
+    </boxalino_dynamic_recommendation_observer>
 </layout>

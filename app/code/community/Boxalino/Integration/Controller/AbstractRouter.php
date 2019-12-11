@@ -6,6 +6,8 @@
  * Custom router for the Boxalino Narrative dynamically rendered pages
  * Manages the default match logic
  * Must be extended and completed with the desired logic for matching routes and actions
+ *
+ * @author Boxalino AG <support@boxalino.com>
  */
 abstract class Boxalino_Integration_Controller_AbstractRouter extends Mage_Core_Controller_Varien_Router_Standard
 {
